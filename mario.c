@@ -6,9 +6,10 @@
 int main(void)
 {
     int height;
-    do {
+    do
+    {
         //     get the height in amount of rows from the user
-        height = get_int("Please give me a number of rows between 1 -8: ");
+        height = get_int("Please give me a number of rows between 1 - 8: ");
     }
 //     if the user enters an invalid input it will ask the question for rows again
     while (height < 1 || height > 8);
@@ -25,12 +26,15 @@ int main(void)
 
 //     add the spaces into the row
         for (int j = 0; j < spaces; j++)
+        {
             printf(" ");
+        }
 
 //     add the bricks into the row after the spaces
         for (int j = 0; j < bricks; j++)
+        {
             printf("#");
-
+        }
         printf("\n");
     }
 }

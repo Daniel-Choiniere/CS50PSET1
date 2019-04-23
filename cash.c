@@ -1,44 +1,50 @@
 // ask the user for the amount of change owed
-//   check to see if the user submits a valid amount
-    // return the least number of coins needed to make the correct change
+// check to see if the user submits a valid amount
+// return the least number of coins needed to make the correct change
 
 #include <cs50.h>
 #include <stdio.h>
 #include <math.h>
 
-int main(void) {
+int main(void)
+{
 //     intialize variables so they are availabe in the global scope
     int counter;
     float change;
     int cents;
 
-    do {
+    do
+    {
 //       get input from customer - amount of change due
         change = get_float("Change Due: ");
     }
 //         if user enters a negative number re ask for the amount of change due
     while (change <= 0);
 //         round the change off into a whole number
-        cents = round(change * 100);
+    cents = round(change * 100);
 
-        counter = 0;
-        while ((cents / 25) > 0) {
-            cents -= 25;
-            counter++;
-        }
-        while ((cents / 10) > 0) {
-            cents -= 10;
-            counter++;
-        }
-        while ((cents / 5) > 0) {
-            cents -= 5;
-            counter++;
-        }
-        while ((cents / 1) > 0) {
-            cents -= 1;
-            counter++;
-        }
+    counter = 0;
+    while ((cents / 25) > 0)
+    {
+        cents -= 25;
+        counter++;
+    }
+    while ((cents / 10) > 0)
+    {
+        cents -= 10;
+        counter++;
+    }
+    while ((cents / 5) > 0)
+    {
+        cents -= 5;
+        counter++;
+    }
+    while ((cents / 1) > 0)
+    {
+        cents -= 1;
+        counter++;
+    }
 
 
-        printf("%i\n", counter);
+    printf("%i\n", counter);
 }
