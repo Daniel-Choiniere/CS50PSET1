@@ -35,15 +35,6 @@ int main(void)
         {
             printf("#");
         }
-        // printf("\n");
-        printf("  ");
-
-
-//     add the second pyramid of bricks into the row after the space after first pyramid
-        for (int j = 0; j < bricks; j++)
-        {
-            printf("#");
-        }
         printf("\n");
     }
 }
