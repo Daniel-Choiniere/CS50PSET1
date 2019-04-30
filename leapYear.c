@@ -1,28 +1,29 @@
 #include <cs50.h>
 #include <stdio.h>
 
-// declaring and defining the function
-void printSum(void);
-void printSums(int, int);
-int squared(int);
-
-
 // create a function isLeapYear
 // returns a bool
 // accepts an int
 // leap year is every 4 years unless divisible by 100
 // but IS if it is divisible by 400
 
-
 void isLeapYear(int x)
 {
-    if (x % 4 == 0 || x % 100 == 0 || x % 400 == 0)
+    if (x % 400 == 0)
+    {
+        printf("true\n");
+    }
+    else if (x % 100 == 0)
+    {
+        printf("false\n");
+    }
+    else if (x % 4 == 0)
     {
         printf("true\n");
     }
     else
     {
-       printf("false\n");
+        printf("false\n");
     }
 }
 
